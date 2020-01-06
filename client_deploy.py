@@ -1,8 +1,9 @@
 import requests
 import json
 
+
 def post_request(server_name, action, body, node_certificate, node_key):
-	request_url= 'http://127.0.0.1/'.format(server_name,action)
+	request_url= 'http://www.wkbonline.net/'.format(server_name,action)
 	request_headers = {
 		'Content-Type': "application/json"
 		}
@@ -10,7 +11,7 @@ def post_request(server_name, action, body, node_certificate, node_key):
 		url= request_url,
 		data=json.dumps(body),
 		headers = request_headers,
-		cert = (node_certificate, node_key),
+		#cert = (node_certificate, node_key),
 	)
 
 	return response
@@ -21,12 +22,13 @@ def update_content():
 	files = raw_input
 
 def get_content():
-	return 0
+	content_dict = {}
+	return content_dict
 
 
 def main():
-	server_name = 'Wesleys-MacBook-Pro.local'
-	update_content()
+	server_name = 'deployment-server'
+	#update_content()
 	content = get_content()
 	post_response = post_request(server_name,'deploy',content,'../keys/???.crt','../keys/???.key')
 	for x in post_response:
