@@ -3,7 +3,7 @@ import json
 
 
 def post_request(server_name, action, body, node_certificate, node_key):
-	request_url= 'http://www.wkbonline.net/'.format(server_name,action)
+	request_url= 'http://www.wkbonline.net/server'.format(server_name,action)
 	request_headers = {
 		'Content-Type': "application/json"
 		}
@@ -31,8 +31,7 @@ def main():
 	#update_content()
 	content = get_content()
 	post_response = post_request(server_name,'deploy',content,'../keys/???.crt','../keys/???.key')
-	for x in post_response:
-		print(x,post_response[x])
+	print(post_response.content)
 
 if __name__ == '__main__':
 	main()
