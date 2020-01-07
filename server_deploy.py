@@ -4,7 +4,6 @@ import json
 from multiprocessing import Process
 
 deployment_service = Flask(__name__)
-deployment_service.config['SERVER_NAME'] = "172.31.37.149:80"
 api = Api(deployment_service)
 
 class welcome(Resource):
