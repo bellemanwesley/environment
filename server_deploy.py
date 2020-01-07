@@ -13,7 +13,7 @@ class welcome(Resource):
 class deploy(Resource):
 	def post(self):
 		data = request.get_json()
-		data_dict = json.loads(data)
+		print(type(data))
 		try:
 			success = True
 		except:
