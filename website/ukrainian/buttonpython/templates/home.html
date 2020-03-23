@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Python Button Script
+	</title>
+</head>
+<body>
+
+	<form action="{% url 'script' %}" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+
+	<!--<button onclick="location.href='{% url 'script' %}'">Execute Script</button> --><hr>
+	{% if data %}
+
+	{{data}}
+
+	{% endif %}
+
+</body>
+</html>

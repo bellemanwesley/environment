@@ -57,9 +57,25 @@ body {
   clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+/* Navbar links */
+.button4 a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: black;
+  font-size: 2em;
+}
+
+/* Links - change color on hover */
+.button4 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */ 
+/*@media screen and (max-width: 600px) {
   .column.side, .column.middle {
     width: 100%;
   }
-}
+} */
